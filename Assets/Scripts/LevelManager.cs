@@ -16,6 +16,8 @@ public class LevelManager : Singleton<LevelManager>
 
     public Dictionary<Point, TileScript> Tiles { get; set; }
 
+    private Point mapSize;
+
     public float TileSize
     {
         get 
@@ -42,6 +44,8 @@ public class LevelManager : Singleton<LevelManager>
         Tiles = new Dictionary<Point, TileScript>();
 
         string[] mapData = ReadLevelText();
+
+        mapSize = new Point(mapData[0].ToCharArray().Length, mapData.Length);
 
         int mapX = mapData[0].ToCharArray().Length;
         int mapY = mapData.Length;
@@ -72,8 +76,8 @@ public class LevelManager : Singleton<LevelManager>
         int tileIndex = int.Parse(tileType);
 
         TileScript newTile = Instantiate(tilePrefabs[tileIndex]).GetComponent<TileScript>();
-
-        newTile.Setup(new Point(x, y), new Vector3(worldStart.x + (TileSize * x), worldStart.y - (TileSize * y), 0), map);
+        Debug.Log(tileIndex);
+        newTile.Setup(new Point(x, y), new Vector3(worldStart.x + (TileSize * x), worldStart.y - (TileSize * y), 0), map, tileIndex == 1, tileIndex == 3);
     }
 
     private string[] ReadLevelText() 
@@ -83,5 +87,10 @@ public class LevelManager : Singleton<LevelManager>
         string data = bindData.text.Replace(Environment.NewLine, string.Empty);
 
         return data.Split('-');
+    }
+
+    public bool InBounce(Point position)
+    {
+        return position.X >= 0 && position.Y >= 0 && position.X <= mapSize.X && position.Y <= mapSize.Y;
     }
 }
