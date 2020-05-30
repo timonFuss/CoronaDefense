@@ -37,6 +37,7 @@ public class TileScript : MonoBehaviour
         this.IsStart = start;
         this.IsFinish = finish;
         this.SpriteRenderer = GetComponent<SpriteRenderer>();
+        this.SpriteRenderer.sortingOrder = -1;
         transform.position = worldPos;
         transform.SetParent(parent);
         LevelManager.Instance.Tiles.Add(gridPos, this);
@@ -50,6 +51,7 @@ public class TileScript : MonoBehaviour
             {
                 PlaceTower();
                 this.IsWalkable = false;
+                this.IsPlaceable = false;
             }
         } 
     }
