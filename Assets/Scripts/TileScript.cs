@@ -11,6 +11,10 @@ public class TileScript : MonoBehaviour
 
     public bool IsWalkable { get; private set; }
 
+    public bool IsStart { get; set; }
+
+    public bool IsFinish { get; set; }
+
     public SpriteRenderer SpriteRenderer{ get; set; }
 
     // Start is called before the first frame update
@@ -22,14 +26,17 @@ public class TileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SpriteRenderer = GetComponent<SpriteRenderer>();
+        //SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void Setup(Point gridPos, Vector3 worldPos, Transform parent, bool placeable, bool walkable) 
+    public void Setup(Point gridPos, Vector3 worldPos, Transform parent, bool placeable, bool walkable, bool start, bool finish) 
     {
         this.GridPosition = gridPos;
         this.IsPlaceable = placeable;
         this.IsWalkable = walkable;
+        this.IsStart = start;
+        this.IsFinish = finish;
+        this.SpriteRenderer = GetComponent<SpriteRenderer>();
         transform.position = worldPos;
         transform.SetParent(parent);
         LevelManager.Instance.Tiles.Add(gridPos, this);

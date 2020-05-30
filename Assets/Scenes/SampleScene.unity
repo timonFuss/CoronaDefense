@@ -765,6 +765,7 @@ MonoBehaviour:
   - {fileID: 4184500337723632847, guid: bace43454dd41400ca9fb2beb9b0a7c2, type: 3}
   cameraMovement: {fileID: 519420030}
   map: {fileID: 1810206187}
+  jsonFile: {fileID: 4900000, guid: 17b215e07e576d648a56c6dd9c3d8978, type: 3}
 --- !u!4 &951888386
 Transform:
   m_ObjectHideFlags: 0

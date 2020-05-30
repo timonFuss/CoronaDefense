@@ -40,6 +40,7 @@ public class AStarDebugger : MonoBehaviour
                         goal = tmp;
                         goal.SpriteRenderer.color = Color.red;
 
+                        //TODO: Call this method after the map is instantiated 
                         AStar.GetPath(start.GridPosition, goal.GridPosition);
                     }
                 }

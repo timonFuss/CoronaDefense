@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\TileScript.cs" />
     <Compile Include="Assets\Scripts\TowerButton.cs" />
     <None Include="Assets\Resources\Level_1.txt" />
+    <None Include="Assets\Resources\Level1_JSON.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
