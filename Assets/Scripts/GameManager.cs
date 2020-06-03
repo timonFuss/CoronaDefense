@@ -19,6 +19,9 @@ public class GameManager : Singleton<GameManager>
 
     private List<Monster> activeMonsters = new List<Monster>();
 
+
+    private Tower selectedTower;
+
     public bool WaveActive
     {
         get
@@ -97,6 +100,26 @@ public class GameManager : Singleton<GameManager>
 
             yield return new WaitForSeconds(2.5f);
         }
+    }
+
+    public void SelectTower(Tower tower)
+    {
+        if (selectedTower != null)
+        {
+            selectedTower.Select();
+        }
+        selectedTower = tower;
+        selectedTower.Select();
+    }
+
+    public void DeselectTower()
+    {
+        if (selectedTower != null)
+        {
+            selectedTower.Select();
+        }
+
+        selectedTower = null;
     }
 
     public void RemoveMonster(Monster monster)

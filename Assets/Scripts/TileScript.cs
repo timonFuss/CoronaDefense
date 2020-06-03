@@ -17,6 +17,8 @@ public class TileScript : MonoBehaviour
 
     public SpriteRenderer SpriteRenderer{ get; set; }
 
+    private Tower myTower;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +55,17 @@ public class TileScript : MonoBehaviour
                 this.IsWalkable = false;
                 this.IsPlaceable = false;
             }
-        } 
+        }else if(!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.ClickedButton == null && Input.GetMouseButtonDown(0))
+        {
+            if (myTower != null)
+            {
+                GameManager.Instance.SelectTower(myTower);
+            }
+            else
+            {
+                GameManager.Instance.DeselectTower();
+            }
+        }
     }
 
     private void PlaceTower()
@@ -62,6 +74,7 @@ public class TileScript : MonoBehaviour
         tower.GetComponent<SpriteRenderer>().sortingOrder = GridPosition.Y;
         tower.transform.SetParent(transform);
 
+        this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
         Hover.Instance.Deactivate();
 
         GameManager.Instance.BuyTower();
