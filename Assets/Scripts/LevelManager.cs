@@ -23,7 +23,24 @@ public class LevelManager : Singleton<LevelManager>
 
     private Point mapSize;
 
-    private TileScript startTile, finishTile;
+    public TileScript startTile, finishTile;
+
+    public SpawnTile StartSpawnTile;
+
+    private Stack<Node> path;
+
+    public Stack<Node> Path
+    {
+        get
+        {
+            if(path == null)
+            {
+                GeneratePath();
+            }
+            return new Stack<Node>(new Stack<Node>(path));
+        }
+    }
+
 
     public float TileSize
     {
@@ -113,10 +130,12 @@ public class LevelManager : Singleton<LevelManager>
         {
             startTile = newTile;
             startTile.SpriteRenderer.color = Color.green;
+            //StartSpawnTile.SpawningTile = startTile;
         }else if(newTile.IsFinish == true)
         {
             finishTile = newTile;
             finishTile.SpriteRenderer.color = Color.red;
+            finishTile.tag = "DespawnTag";
         }
     }
     
@@ -144,6 +163,11 @@ public class LevelManager : Singleton<LevelManager>
     public bool InBounce(Point position)
     {
         return position.X >= 0 && position.Y >= 0 && position.X <= mapSize.X && position.Y <= mapSize.Y;
+    }
+
+    public void GeneratePath()
+    {
+        path = AStar.GetPath(startTile.GridPosition, finishTile.GridPosition);
     }
 
     [Serializable]
