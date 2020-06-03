@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using System.IO;
+using UnityEngine.UI;
 
 public class LevelManager : Singleton<LevelManager>
 {
@@ -14,9 +16,14 @@ public class LevelManager : Singleton<LevelManager>
     [SerializeField]
     private Transform map;
 
+    [SerializeField]
+    private TextAsset jsonFile;
+
     public Dictionary<Point, TileScript> Tiles { get; set; }
 
     private Point mapSize;
+
+    private TileScript startTile, finishTile;
 
     public float TileSize
     {
@@ -54,6 +61,29 @@ public class LevelManager : Singleton<LevelManager>
 
         Vector3 worldStart = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height));
 
+
+        
+        LevelTiles tilesInJson = JsonUtility.FromJson<LevelTiles>(jsonFile.text);
+        int xLength = tilesInJson.tiles.Length / tilesInJson.rows;
+        int idx = 0;
+
+        for (int y = 0; y < tilesInJson.rows; y++)
+        {
+            for (int x = 0; x < xLength; x++)
+            {
+                PlaceTile(tilesInJson.tiles[idx], x, y, worldStart);
+                idx += 1;
+            }
+        }
+
+        AStar.GetPath(startTile.GridPosition, finishTile.GridPosition);
+
+        maxTile = Tiles[new Point(xLength - 1, tilesInJson.rows - 1)].transform.position;
+
+        cameraMovement.SetLimits(new Vector3(maxTile.x + TileSize, maxTile.y - TileSize));
+        
+
+        /*
         for (int y = 0; y < mapY; y++)
         {
 
@@ -64,21 +94,43 @@ public class LevelManager : Singleton<LevelManager>
                 PlaceTile(newTiles[x].ToString(), x, y, worldStart);
             }
         }
-
         maxTile = Tiles[new Point(mapX - 1, mapY - 1)].transform.position;
 
         cameraMovement.SetLimits(new Vector3(maxTile.x + TileSize, maxTile.y - TileSize));
+        */
+
+
     }
 
+    
+    private void PlaceTile(Tile tile, int x, int y, Vector3 worldStart)
+    {
+
+        TileScript newTile = Instantiate(tilePrefabs[tile.assetID]).GetComponent<TileScript>();
+        newTile.Setup(new Point(x, y), new Vector3(worldStart.x + (TileSize * x), worldStart.y - (TileSize * y), 0), map, tile.placeable, tile.walkable, tile.start, tile.finish);
+
+        if(newTile.IsStart == true)
+        {
+            startTile = newTile;
+            startTile.SpriteRenderer.color = Color.green;
+        }else if(newTile.IsFinish == true)
+        {
+            finishTile = newTile;
+            finishTile.SpriteRenderer.color = Color.red;
+        }
+    }
+    
+
+    /*
     private void PlaceTile(string tileType, int x, int y, Vector3 worldStart)
     {
 
         int tileIndex = int.Parse(tileType);
 
         TileScript newTile = Instantiate(tilePrefabs[tileIndex]).GetComponent<TileScript>();
-        Debug.Log(tileIndex);
         newTile.Setup(new Point(x, y), new Vector3(worldStart.x + (TileSize * x), worldStart.y - (TileSize * y), 0), map, tileIndex == 1, tileIndex == 3);
     }
+    */
 
     private string[] ReadLevelText() 
     {
@@ -92,5 +144,22 @@ public class LevelManager : Singleton<LevelManager>
     public bool InBounce(Point position)
     {
         return position.X >= 0 && position.Y >= 0 && position.X <= mapSize.X && position.Y <= mapSize.Y;
+    }
+
+    [Serializable]
+    private class Tile
+    {
+        public int assetID;
+        public bool start;
+        public bool finish;
+        public bool placeable;
+        public bool walkable;
+    }
+
+    [Serializable]
+    private class LevelTiles
+    {
+        public int rows;
+        public Tile[] tiles;
     }
 }
