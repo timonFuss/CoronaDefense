@@ -13,10 +13,10 @@ public class AStarDebugger : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        ClickTile();
-    }
+    //void Update()
+    //{
+    //    ClickTile();
+    //}
 
     private void ClickTile()
     {

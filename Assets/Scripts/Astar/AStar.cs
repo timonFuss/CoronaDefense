@@ -22,7 +22,7 @@ public static class AStar
         }
     }
 
-    public static void GetPath(Point start, Point goal)
+    public static Stack<Node> GetPath(Point start, Point goal)
     {
         if(nodes == null)
         {
@@ -110,7 +110,7 @@ public static class AStar
 
         foreach (Node node in finalPath)
         {
-            Debug.Log(node.GridPosition.X + ", " + node.GridPosition.Y);
+            //Debug.Log(node.GridPosition.X + ", " + node.GridPosition.Y);
             if (node.TileRef != nodes[start].TileRef && node.TileRef != nodes[goal].TileRef)
             {
                 node.TileRef.SpriteRenderer.color = Color.blue;
@@ -118,7 +118,7 @@ public static class AStar
             
         }
 
-        
+        return finalPath;
 
     }
 }
