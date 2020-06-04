@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2047555792860797528}
   - component: {fileID: 5592366363102457039}
+  - component: {fileID: 3465359053232980254}
   m_Layer: 0
   m_Name: Spray
   m_TagString: Untagged
@@ -82,6 +83,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3465359053232980254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215634173684947398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e50533b270bf2745b56157e70a8f787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileType: greenSpray
+  projectileSpeed: 3
+  damage: 5
+  attackCooldown: 0
 --- !u!1 &4428001381839572993
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,4 +226,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileType: greenSpray
   projectileSpeed: 8
+  damage: 0
   attackCooldown: 1

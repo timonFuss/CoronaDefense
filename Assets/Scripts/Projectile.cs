@@ -36,4 +36,19 @@ public class Projectile : MonoBehaviour
             GameManager.Instance.Pool.ReleaseObject(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Monster")
+        {
+            if (target.gameObject == collision.gameObject)
+            {
+                //geht noch nicht. projectile erkennt keinen Tower als parent
+                //target.TakeDamage(parent.Damage);
+                target.TakeDamage(5);
+
+                GameManager.Instance.Pool.ReleaseObject(gameObject);
+            }
+        }
+    }
 }

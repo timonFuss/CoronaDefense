@@ -22,6 +22,8 @@ public class GameManager : Singleton<GameManager>
 
     private Tower selectedTower;
 
+    private int health = 15;
+
     public bool WaveActive
     {
         get
@@ -76,6 +78,7 @@ public class GameManager : Singleton<GameManager>
     {
         LevelManager.Instance.GeneratePath();
 
+        //Amount of Monsters per wave
         for(int i = 0; i < wave * 2; i++)
         {
             int monsterIndex = Random.Range(0, 2);
@@ -85,16 +88,22 @@ public class GameManager : Singleton<GameManager>
             switch (monsterIndex)
             {
                 case 0:
-                    type = "covid_01";
+                    type = "covid_01 Variant";
                     break;
                 case 1:
-                    type = "bat_01";
+                    type = "bat_01 Variant";
                     break;
             }
 
             Monster monster = Pool.GetObject(type).GetComponent<Monster>();
 
-            monster.Spawn();
+            monster.Spawn(health);
+
+            //health of monsters get increased every third wave
+            if(wave % 3 == 0)
+            {
+                health += 5;
+            }
 
             activeMonsters.Add(monster);
 

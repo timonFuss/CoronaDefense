@@ -15,18 +15,39 @@ public class Monster : MonoBehaviour
 
     private Animator myAnimator;
 
+    [SerializeField]
+    private Stat health;
+
+    public bool Alive 
+    {
+        get 
+        { 
+            return health.CurrentVal > 0;
+        }
+    }
+
     public bool IsActive { get; set; }
+
+    private void Awake()
+    {
+        health.Initialize();
+
+        //for Animations
+        myAnimator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
         Move();
     }
 
-    public void Spawn()
+    public void Spawn(int health)
     {
         transform.position = LevelManager.Instance.startTile.transform.position;
 
-        myAnimator = GetComponent<Animator>();
+        this.health.Bar.Reset();
+        this.health.MaxVal = health;
+        this.health.CurrentVal = this.health.MaxVal;
 
         StartCoroutine(Scale(new Vector3(0.1f, 0.1f), new Vector3(1, 1), false));
 
@@ -90,6 +111,9 @@ public class Monster : MonoBehaviour
         if(collision.tag == "DespawnTag")
         {
             StartCoroutine(Scale(new Vector3(1, 1), new Vector3(0.1f, 0.1f), true));
+
+            //shouldnt be a constant. 
+            Player.Instance.Health.CurrentVal -= 20;
         }
     }
 
@@ -113,6 +137,25 @@ public class Monster : MonoBehaviour
             else if(currentPos.X < newPos.X)
             {
                 //Move right
+            }
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (IsActive)
+        {
+            health.CurrentVal -= damage;
+
+            if(health.CurrentVal <= 0)
+            {
+                //wenn währung implementiert wurde
+                //GameManager.Instance.Currency += 2;
+
+                //hier nur entfernen der Monster. Falls Animation vorhanden, Tutorial anschauen.
+                StartCoroutine(Scale(new Vector3(1, 1), new Vector3(0.1f, 0.1f), true));
+
+                IsActive = false;
             }
         }
     }

@@ -25,12 +25,26 @@ public class Tower : MonoBehaviour
         get { return projectileSpeed; }
     }
 
+    [SerializeField]
+    private int damage;
+
+    public int Damage
+    {
+        get
+        {
+            return damage;
+        }
+    }
+
     private bool canAttack = true;
 
     private float attackTimer;
 
     [SerializeField]
     private float attackCooldown;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +88,14 @@ public class Tower : MonoBehaviour
 
                 canAttack = false;
             }
+        }
+        else if(monsters.Count > 0)
+        {
+            target = monsters.Dequeue();
+        }
+        if(target != null && !target.Alive)
+        {
+            target = null;
         }
     }
 
