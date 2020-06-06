@@ -9,6 +9,25 @@ public class GameManager : Singleton<GameManager>
 
     public ObjectPool Pool { get; set; }
 
+    private int currency;
+
+    [SerializeField]
+    private Text currencyText;
+
+    public int Currency
+    {
+        get
+        {
+            return currency;
+        }
+
+        set
+        {
+            this.currency = value;
+            this.currencyText.text = value.ToString() + "<color=lime>$</color>";
+        }
+    }
+
     private int wave = 0;
 
     [SerializeField]
@@ -40,7 +59,7 @@ public class GameManager : Singleton<GameManager>
     // Start is called before the first frame update
     void Start()
     {
-        
+        Currency = 5;
     }
 
     // Update is called once per frame
@@ -53,13 +72,20 @@ public class GameManager : Singleton<GameManager>
     {
         if (!WaveActive)
         {
-            this.ClickedButton = towerButton;
-            Hover.Instance.Activate(towerButton.Sprite);
+            if (Currency >= towerButton.Price)
+            {
+                this.ClickedButton = towerButton;
+                Hover.Instance.Activate(towerButton.Sprite);
+            }
         }
     }
 
     public void BuyTower()
     {
+        if (Currency >= ClickedButton.Price)
+        {
+            Currency -= ClickedButton.Price;
+        }
         ClickedButton = null;
     }
 
