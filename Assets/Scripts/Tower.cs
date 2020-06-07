@@ -48,7 +48,7 @@ public class Tower : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         myAnimator = transform.parent.GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();

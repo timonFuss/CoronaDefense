@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2047555792860797528}
   - component: {fileID: 5592366363102457039}
   - component: {fileID: 3465359053232980254}
+  - component: {fileID: 434673300588255537}
   m_Layer: 0
   m_Name: Spray
   m_TagString: Untagged
@@ -95,10 +96,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e50533b270bf2745b56157e70a8f787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileType: greenSpray
+  projectileType: soundProjectile
   projectileSpeed: 3
   damage: 5
   attackCooldown: 0
+--- !u!95 &434673300588255537
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215634173684947398}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 677000e80c5454cec9cb6a4cf0ac0d47, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4428001381839572993
 GameObject:
   m_ObjectHideFlags: 0

@@ -759,9 +759,9 @@ GameObject:
   m_Component:
   - component: {fileID: 581046327}
   - component: {fileID: 581046330}
+  - component: {fileID: 581046331}
   - component: {fileID: 581046329}
   - component: {fileID: 581046328}
-  - component: {fileID: 581046331}
   m_Layer: 5
   m_Name: Tower_4
   m_TagString: Untagged
@@ -1720,9 +1720,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1092118460}
   - component: {fileID: 1092118463}
+  - component: {fileID: 1092118464}
   - component: {fileID: 1092118462}
   - component: {fileID: 1092118461}
-  - component: {fileID: 1092118464}
   m_Layer: 5
   m_Name: Tower_3
   m_TagString: Untagged
@@ -2099,9 +2099,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1385000424}
   - component: {fileID: 1385000427}
+  - component: {fileID: 1385000428}
   - component: {fileID: 1385000426}
   - component: {fileID: 1385000425}
-  - component: {fileID: 1385000428}
   m_Layer: 5
   m_Name: Tower_2
   m_TagString: Untagged
@@ -2271,7 +2271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -55.799805, y: -225.03003}
+  m_AnchoredPosition: {x: -55.799805, y: -225.03027}
   m_SizeDelta: {x: 111.54431, y: 450.06622}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406610456

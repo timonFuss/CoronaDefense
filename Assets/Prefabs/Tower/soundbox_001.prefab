@@ -125,8 +125,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2256152095178460308}
   - component: {fileID: 5457156345036422806}
-  - component: {fileID: 3545104993103621547}
   - component: {fileID: 120159474737839997}
+  - component: {fileID: 3545104993103621547}
   m_Layer: 0
   m_Name: soundbox_001
   m_TagString: Untagged
@@ -199,6 +199,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &120159474737839997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8581476396062914215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e50533b270bf2745b56157e70a8f787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileType: redDot
+  projectileSpeed: 3
+  damage: 5
+  attackCooldown: 0
 --- !u!95 &3545104993103621547
 Animator:
   serializedVersion: 3
@@ -218,19 +234,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &120159474737839997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8581476396062914215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e50533b270bf2745b56157e70a8f787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectileType: redDot
-  projectileSpeed: 3
-  damage: 5
-  attackCooldown: 0
