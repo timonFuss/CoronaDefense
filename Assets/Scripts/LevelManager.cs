@@ -129,12 +129,12 @@ public class LevelManager : Singleton<LevelManager>
         if(newTile.IsStart == true)
         {
             startTile = newTile;
-            startTile.SpriteRenderer.color = Color.green;
+            //startTile.SpriteRenderer.color = Color.green;
             //StartSpawnTile.SpawningTile = startTile;
         }else if(newTile.IsFinish == true)
         {
             finishTile = newTile;
-            finishTile.SpriteRenderer.color = Color.red;
+            //finishTile.SpriteRenderer.color = Color.red;
             finishTile.tag = "DespawnTag";
         }
     }

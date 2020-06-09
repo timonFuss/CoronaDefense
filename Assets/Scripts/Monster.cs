@@ -150,7 +150,7 @@ public class Monster : MonoBehaviour
             if(health.CurrentVal <= 0)
             {
                 //wenn währung implementiert wurde
-                //GameManager.Instance.Currency += 2;
+                GameManager.Instance.Currency += 2;
 
                 //hier nur entfernen der Monster. Falls Animation vorhanden, Tutorial anschauen.
                 StartCoroutine(Scale(new Vector3(1, 1), new Vector3(0.1f, 0.1f), true));

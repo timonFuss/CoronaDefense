@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Intro
+    name: Captain Sanchez
     sentences:
     - "Argh, that time warp didnt work as expected...\t"
     - Next time you better double check before telling me you got the right coordinates

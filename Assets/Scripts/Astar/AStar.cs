@@ -108,7 +108,7 @@ public static class AStar
         // ONLY FOR DEBUGGING
         //GameObject.Find("AStarDebugger").GetComponent<AStarDebugger>().DebugPath(openList, closedList, finalPath);
 
-        foreach (Node node in finalPath)
+        /* foreach (Node node in finalPath)
         {
             //Debug.Log(node.GridPosition.X + ", " + node.GridPosition.Y);
             if (node.TileRef != nodes[start].TileRef && node.TileRef != nodes[goal].TileRef)
@@ -116,7 +116,7 @@ public static class AStar
                 node.TileRef.SpriteRenderer.color = Color.blue;
             }
             
-        }
+        } */
 
         return finalPath;
 
