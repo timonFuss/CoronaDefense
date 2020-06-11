@@ -59,7 +59,7 @@ public class GameManager : Singleton<GameManager>
     // Start is called before the first frame update
     void Start()
     {
-        Currency = 5;
+        Currency = 25;
     }
 
     // Update is called once per frame
@@ -91,18 +91,31 @@ public class GameManager : Singleton<GameManager>
 
     public void StartWave()
     {
-        wave++;
+        if(LevelManager.Instance.LevelType == 2)
+        {
+            LevelManager.Instance.GeneratePath();
+        }
 
-        waveTxt.text = string.Format("Wave: <color=lime>{0}</color>", wave);
+        if(LevelManager.Instance.Path.Count > 0)
+        {
+            wave++;
 
-        StartCoroutine(SpawnWave());
+            waveTxt.text = string.Format("Wave: <color=lime>{0}</color>", wave);
 
-        waveBtn.SetActive(false);
+            StartCoroutine(SpawnWave());
+
+            waveBtn.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("KEIN GÜLTIGER PATH MÖGLICH!");
+        }
+        
     }
 
     private IEnumerator SpawnWave()
     {
-        LevelManager.Instance.GeneratePath();
+        
 
         //Amount of Monsters per wave
         for(int i = 0; i < wave * 2; i++)

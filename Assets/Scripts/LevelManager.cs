@@ -29,14 +29,27 @@ public class LevelManager : Singleton<LevelManager>
 
     private Stack<Node> path;
 
+    private LevelAttributes level;
+
+    public int LevelType
+    {
+        get { return level.levelType; }
+    }
+
+    int yLength;
+    int xLength;
+
     public Stack<Node> Path
     {
         get
         {
+            // TODO: Überhaupt benötigt?
+            /*
             if(path == null)
             {
                 GeneratePath();
             }
+            */
             return new Stack<Node>(new Stack<Node>(path));
         }
     }
@@ -67,35 +80,37 @@ public class LevelManager : Singleton<LevelManager>
     {
         Tiles = new Dictionary<Point, TileScript>();
 
-        string[] mapData = ReadLevelText();
-
-        mapSize = new Point(mapData[0].ToCharArray().Length, mapData.Length);
-
-        int mapX = mapData[0].ToCharArray().Length;
-        int mapY = mapData.Length;
-
         Vector3 maxTile = Vector3.zero;
 
         Vector3 worldStart = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height));
 
 
         
-        LevelTiles tilesInJson = JsonUtility.FromJson<LevelTiles>(jsonFile.text);
-        int xLength = tilesInJson.tiles.Length / tilesInJson.rows;
+        level = JsonUtility.FromJson<LevelAttributes>(jsonFile.text);
+        xLength = level.tiles.Length / level.rows;
+        yLength = level.rows;
         int idx = 0;
 
-        for (int y = 0; y < tilesInJson.rows; y++)
+        for (int y = 0; y < level.rows; y++)
         {
             for (int x = 0; x < xLength; x++)
             {
-                PlaceTile(tilesInJson.tiles[idx], x, y, worldStart);
+                PlaceTile(level.tiles[idx], x, y, worldStart);
                 idx += 1;
             }
         }
 
-        AStar.GetPath(startTile.GridPosition, finishTile.GridPosition);
+        if(level.levelType == 1 || level.levelType == 3)
+        {
+            GeneratePath();
+        }
+        else
+        {
+            Debug.Log("Freestyle path --> erst bei wavespawn berechnen");
+        }
+        
 
-        maxTile = Tiles[new Point(xLength - 1, tilesInJson.rows - 1)].transform.position;
+        maxTile = Tiles[new Point(xLength - 1, level.rows - 1)].transform.position;
 
         cameraMovement.SetLimits(new Vector3(maxTile.x + TileSize, maxTile.y - TileSize));
         
@@ -151,18 +166,9 @@ public class LevelManager : Singleton<LevelManager>
     }
     */
 
-    private string[] ReadLevelText() 
-    {
-        TextAsset bindData = Resources.Load("Level_1") as TextAsset;
-
-        string data = bindData.text.Replace(Environment.NewLine, string.Empty);
-
-        return data.Split('-');
-    }
-
     public bool InBounce(Point position)
     {
-        return position.X >= 0 && position.Y >= 0 && position.X <= mapSize.X && position.Y <= mapSize.Y;
+        return position.X >= 0 && position.Y >= 0 && position.X < xLength && position.Y < yLength;
     }
 
     public void GeneratePath()
@@ -181,9 +187,10 @@ public class LevelManager : Singleton<LevelManager>
     }
 
     [Serializable]
-    private class LevelTiles
+    private class LevelAttributes
     {
         public int rows;
+        public int levelType;
         public Tile[] tiles;
     }
 }

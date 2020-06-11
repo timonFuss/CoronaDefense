@@ -47,7 +47,6 @@ public static class AStar
                 for (int y = -1; y <= 1; y++)
                 {
                     Point neighbourPos = new Point(currentNode.GridPosition.X + x, currentNode.GridPosition.Y +  y);
-
                     if (LevelManager.Instance.InBounce(neighbourPos) && LevelManager.Instance.Tiles[neighbourPos].IsWalkable && neighbourPos != currentNode.GridPosition)
                     {
                         int gCost = 0;

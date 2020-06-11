@@ -1,5 +1,6 @@
 {
   "rows": 9,
+  "levelType": 1,
   "tiles":
   [
 
