@@ -91,7 +91,6 @@ public class GameManager : Singleton<GameManager>
 
     public void SellTower(Tower tower)
     {
-        tower.GetComponentInParent<TileScript>().IsPlaceable = true;
         Destroy(tower.transform.parent.gameObject);
         Currency += tower.Price;
         

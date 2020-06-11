@@ -7,7 +7,7 @@ public class TileScript : MonoBehaviour
 {
 
     public Point GridPosition { get; private set; }
-    public bool IsPlaceable { get; set; }
+    public bool IsPlaceable { get; private set; }
 
     public bool IsWalkable { get; private set; }
 
