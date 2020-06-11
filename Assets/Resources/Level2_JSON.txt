@@ -104,7 +104,7 @@
       "assetID": 3,
       "start": true,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": true
     },
     {
@@ -761,7 +761,7 @@
       "assetID": 3,
       "start": false,
       "finish": true,
-      "placeable": true,
+      "placeable": false,
       "walkable": true
     },
 
