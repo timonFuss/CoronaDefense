@@ -45,7 +45,7 @@ public class Tower : MonoBehaviour
     [SerializeField]
     private float attackCooldown;
 
-
+    public int Price { get; set; }
 
     // Start is called before the first frame update
     void Start()

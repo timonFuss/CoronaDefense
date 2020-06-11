@@ -89,6 +89,14 @@ public class GameManager : Singleton<GameManager>
         ClickedButton = null;
     }
 
+    public void SellTower(Tower tower)
+    {
+        tower.GetComponentInParent<TileScript>().IsPlaceable = true;
+        Destroy(tower.transform.parent.gameObject);
+        Currency += tower.Price;
+        
+    }
+
     public void StartWave()
     {
         if(LevelManager.Instance.LevelType == 2)

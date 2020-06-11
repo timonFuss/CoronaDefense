@@ -7,7 +7,7 @@ public class TileScript : MonoBehaviour
 {
 
     public Point GridPosition { get; private set; }
-    public bool IsPlaceable { get; private set; }
+    public bool IsPlaceable { get; set; }
 
     public bool IsWalkable { get; private set; }
 
@@ -65,6 +65,11 @@ public class TileScript : MonoBehaviour
             {
                 GameManager.Instance.DeselectTower();
             }
+        }else if(!EventSystem.current.IsPointerOverGameObject() && myTower != null && Input.GetMouseButtonDown(1))
+        {
+            this.IsWalkable = true;
+            this.IsPlaceable = true;
+            GameManager.Instance.SellTower(this.myTower);
         }
     }
 
@@ -77,6 +82,7 @@ public class TileScript : MonoBehaviour
         this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
         Hover.Instance.Deactivate();
 
+        myTower.Price = GameManager.Instance.ClickedButton.Price;
         GameManager.Instance.BuyTower();
     }
 }
