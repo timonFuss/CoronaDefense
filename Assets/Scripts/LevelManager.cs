@@ -191,6 +191,7 @@ public class LevelManager : Singleton<LevelManager>
     {
         public int rows;
         public int levelType;
+        public int waves;
         public Tile[] tiles;
     }
 }

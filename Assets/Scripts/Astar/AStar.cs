@@ -61,7 +61,11 @@ public static class AStar
                         }
                         else
                         {
-                            gCost = 21;
+                            if (!ConnectedDiagonally(currentNode, nodes[neighbourPos]))
+                            {
+                                continue;
+                            }
+                            gCost = 14;
                         }
 
                         Node neighbour = nodes[neighbourPos];
@@ -119,5 +123,22 @@ public static class AStar
 
         return finalPath;
 
+    }
+
+    private static bool ConnectedDiagonally(Node currentNode, Node neighbor)
+    {
+        Point direction = neighbor.GridPosition - currentNode.GridPosition;
+
+        Point first = new Point(currentNode.GridPosition.X + direction.X, currentNode.GridPosition.Y + direction.Y);
+
+        Point second = new Point(currentNode.GridPosition.X, currentNode.GridPosition.Y + direction.Y);
+
+        if ((LevelManager.Instance.InBounce(first) && !LevelManager.Instance.Tiles[first].IsWalkable) || 
+            (LevelManager.Instance.InBounce(second) && !LevelManager.Instance.Tiles[second].IsWalkable))
+        {
+            return false;
+        }
+
+        return true;
     }
 }
