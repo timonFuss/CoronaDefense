@@ -690,9 +690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a484acef8d6d6643af474307bc3c537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: 
-    senteces: []
 --- !u!1 &947631893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,9 +1425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a484acef8d6d6643af474307bc3c537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: 
-    senteces: []
 --- !u!1 &1939505148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,7 +1665,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1894209062}
-        m_MethodName: playGame
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1741,6 +1735,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a484acef8d6d6643af474307bc3c537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: 
-    senteces: []

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager>
@@ -41,7 +42,15 @@ public class GameManager : Singleton<GameManager>
 
     private Tower selectedTower;
 
-    private int health = 15;
+    private int monsterHealth = 15;
+
+    private bool gameOver = false;
+
+    [SerializeField]
+    private GameObject gameOverMenu;
+
+    [SerializeField]
+    private GameObject nextLevelMenu;
 
     public bool WaveActive
     {
@@ -65,7 +74,11 @@ public class GameManager : Singleton<GameManager>
     // Update is called once per frame
     void Update()
     {
-        
+        if(Player.Instance.Health.CurrentVal <= 0)
+        {
+            gameOverMenu.SetActive(true);
+            gameOver = true;
+        }
     }
 
     public void PickTower(TowerButton towerButton)
@@ -143,12 +156,12 @@ public class GameManager : Singleton<GameManager>
 
             Monster monster = Pool.GetObject(type).GetComponent<Monster>();
 
-            monster.Spawn(health);
+            monster.Spawn(monsterHealth);
 
             //health of monsters get increased every third wave
             if(wave % 3 == 0)
             {
-                health += 5;
+                monsterHealth += 5;
             }
 
             activeMonsters.Add(monster);
@@ -181,9 +194,36 @@ public class GameManager : Singleton<GameManager>
     {
         activeMonsters.Remove(monster);
 
-        if (!WaveActive)
+        if (!WaveActive && !gameOver)
         {
-            waveBtn.SetActive(true);
+            if(wave >= 5)
+            {
+                nextLevelMenu.SetActive(true);
+            }
+            else 
+            {
+                waveBtn.SetActive(true);
+            }
+            
         }
+    }
+
+    public void LoadNextLevel()
+    {
+        var level = LevelManager.Instance.LevelType;
+        level++;
+        SceneManager.LoadScene("Level" + level);
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenuScene");
     }
 }
