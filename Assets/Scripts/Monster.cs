@@ -41,6 +41,11 @@ public class Monster : MonoBehaviour
         Move();
     }
 
+    public void SetSpeed(float speed)
+    {
+        this.speed = speed;
+    }
+
     public void Spawn(int health)
     {
         transform.position = LevelManager.Instance.startTile.transform.position;

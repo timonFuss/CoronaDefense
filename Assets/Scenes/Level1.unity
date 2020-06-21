@@ -156,6 +156,8 @@ MonoBehaviour:
   waveBtn: {fileID: 1043397659}
   gameOverMenu: {fileID: 1840959401}
   nextLevelMenu: {fileID: 337123706}
+  healthBar: {fileID: 813885565}
+  towerPanel: {fileID: 691429480}
 --- !u!4 &10121709
 Transform:
   m_ObjectHideFlags: 0
@@ -2023,7 +2025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &860603908
 RectTransform:
   m_ObjectHideFlags: 0

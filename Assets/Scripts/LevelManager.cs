@@ -36,6 +36,16 @@ public class LevelManager : Singleton<LevelManager>
         get { return level.levelType; }
     }
 
+    public int LevelIdx
+    {
+        get { return level.levelIdx;  }
+    }
+
+    public int Waves
+    {
+        get { return level.waves; }
+    }
+
     int yLength;
     int xLength;
 
@@ -87,6 +97,7 @@ public class LevelManager : Singleton<LevelManager>
 
         
         level = JsonUtility.FromJson<LevelAttributes>(jsonFile.text);
+        GameManager.Instance.RemainingWaves = level.waves;
         xLength = level.tiles.Length / level.rows;
         yLength = level.rows;
         int idx = 0;
@@ -189,6 +200,7 @@ public class LevelManager : Singleton<LevelManager>
     [Serializable]
     private class LevelAttributes
     {
+        public int levelIdx;
         public int rows;
         public int levelType;
         public int waves;

@@ -31,6 +31,8 @@ public class GameManager : Singleton<GameManager>
 
     private int wave = 0;
 
+    private int remainingWaves = 0;
+
     [SerializeField]
     private Text waveTxt;
 
@@ -52,12 +54,29 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private GameObject nextLevelMenu;
 
+    private bool fatBatSpawned = false;
+
+    [SerializeField]
+    private GameObject healthBar;
+
+    [SerializeField]
+    private SliderMenuAnim towerPanel;
+
     public bool WaveActive
     {
         get
         {
             return activeMonsters.Count > 0;
         }
+    }
+
+    public int RemainingWaves
+    {
+        get
+        {
+            return remainingWaves;
+        }
+        set { remainingWaves = value; }
     }
 
     private void Awake()
@@ -111,7 +130,8 @@ public class GameManager : Singleton<GameManager>
 
     public void StartWave()
     {
-        if(LevelManager.Instance.LevelType == 2)
+        towerPanel.ShowSideMenu();
+        if (LevelManager.Instance.LevelType == 2)
         {
             LevelManager.Instance.GeneratePath();
         }
@@ -135,38 +155,50 @@ public class GameManager : Singleton<GameManager>
 
     private IEnumerator SpawnWave()
     {
-        
-
-        //Amount of Monsters per wave
-        for(int i = 0; i < wave * 2; i++)
+        if(remainingWaves == 0 && LevelManager.Instance.LevelIdx == 1)
         {
-            int monsterIndex = Random.Range(0, 2);
-
-            string type = string.Empty;
-
-            switch (monsterIndex)
-            {
-                case 0:
-                    type = "covid_01 Variant";
-                    break;
-                case 1:
-                    type = "bat_01 Variant";
-                    break;
-            }
-
-            Monster monster = Pool.GetObject(type).GetComponent<Monster>();
-
-            monster.Spawn(monsterHealth);
-
-            //health of monsters get increased every third wave
-            if(wave % 3 == 0)
-            {
-                monsterHealth += 5;
-            }
-
+            Monster monster = Pool.GetObject("bat_01 Variant").GetComponent<Monster>();
+            monster.GetComponent<SpriteRenderer>().color = Color.red;
+            monster.SetSpeed(25);
+            monster.Spawn(5000000);
             activeMonsters.Add(monster);
+            fatBatSpawned = true;
+        }
 
-            yield return new WaitForSeconds(2.5f);
+        if (remainingWaves > 0)
+        {
+            remainingWaves--;
+            //Amount of Monsters per wave
+            for (int i = 0; i < wave * 2; i++)
+            {
+                int monsterIndex = Random.Range(0, 2);
+
+                string type = string.Empty;
+
+                switch (monsterIndex)
+                {
+                    case 0:
+                        type = "covid_01 Variant";
+                        break;
+                    case 1:
+                        type = "bat_01 Variant";
+                        break;
+                }
+
+                Monster monster = Pool.GetObject(type).GetComponent<Monster>();
+
+                monster.Spawn(monsterHealth);
+
+                //health of monsters get increased every third wave
+                if (wave % 3 == 0)
+                {
+                    monsterHealth += 5;
+                }
+
+                activeMonsters.Add(monster);
+
+                yield return new WaitForSeconds(2.5f);
+            }
         }
     }
 
@@ -194,23 +226,42 @@ public class GameManager : Singleton<GameManager>
     {
         activeMonsters.Remove(monster);
 
+        if (monster.GetComponent<SpriteRenderer>().color == Color.red && monster.name.Equals("bat_01 Variant"))
+        {
+            //Fette Fledermaus ist im Ziel!
+            nextLevelMenu.SetActive(true);
+        }
+
         if (!WaveActive && !gameOver)
         {
-            if(wave >= 5)
+            if (remainingWaves == 0)
             {
-                nextLevelMenu.SetActive(true);
+                if(LevelManager.Instance.LevelIdx == 1 && !fatBatSpawned)
+                {
+                    //Im ersten Level die fette Fledermaus spawnen
+                    waveTxt.enabled = false;
+                    waveBtn.SetActive(false);
+                    currencyText.enabled = false;
+                    healthBar.SetActive(false);
+                    StartCoroutine(SpawnWave());
+                }
+                else
+                {
+                    nextLevelMenu.SetActive(true);
+                }
+
             }
-            else 
+            else
             {
+                towerPanel.ShowSideMenu();
                 waveBtn.SetActive(true);
             }
-            
         }
     }
 
     public void LoadNextLevel()
     {
-        var level = LevelManager.Instance.LevelType;
+        var level = LevelManager.Instance.LevelIdx;
         level++;
         SceneManager.LoadScene("Level" + level);
     }
