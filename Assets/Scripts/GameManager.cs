@@ -54,6 +54,9 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private GameObject nextLevelMenu;
 
+    [SerializeField]
+    private GameObject keyBoardMenu;
+
     private bool fatBatSpawned = false;
 
     [SerializeField]
@@ -87,6 +90,10 @@ public class GameManager : Singleton<GameManager>
     // Start is called before the first frame update
     void Start()
     {
+        if (keyBoardMenu != null)
+        {
+            keyBoardMenu.SetActive(true);
+        }
         Currency = 25;
     }
 
@@ -276,5 +283,10 @@ public class GameManager : Singleton<GameManager>
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void CloseKeyboardPopUp()
+    {
+        keyBoardMenu.SetActive(false);
     }
 }

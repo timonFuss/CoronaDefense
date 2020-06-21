@@ -7,91 +7,91 @@
   [
 
   {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 2,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 0,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
@@ -102,195 +102,91 @@
 
 
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": true,
       "finish": false,
       "placeable": false,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 2,
+      "assetID": 5,
       "start": false,
       "finish": false,
       "placeable": true,
-      "walkable": true
+      "walkable": false
     },
     {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 2,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 0,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
@@ -301,92 +197,196 @@
 
 
 
+
+
+
+
+
+
+
+
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 7,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": false
+    },
+    {
+      "assetID": 7,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": false
+    },
+    {
+      "assetID": 7,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": false
+    },
+    {
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+
+
+
+
+
+    {
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 0,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 8,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": false
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
@@ -396,276 +396,91 @@
 
 
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 2,
+      "assetID": 8,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": false
+    },
+    {
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 2,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-
-
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 2,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 0,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 3,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
-      "start": false,
-      "finish": false,
-      "placeable": true,
-      "walkable": true
-    },
-    {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
@@ -673,93 +488,278 @@
     },
 
 
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 5,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": false
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
 
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 2,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 6,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": false
+    },
+    {
+      "assetID": 6,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": false
+    },
+    {
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+
+
+
+    {
+      "assetID": 7,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": false
+    },
+    {
+      "assetID": 7,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": false
+    },
+    {
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 3,
+      "assetID": 5,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": false
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
+      "start": false,
+      "finish": false,
+      "placeable": true,
+      "walkable": true
+    },
+    {
+      "assetID": 4,
       "start": false,
       "finish": true,
       "placeable": false,
@@ -768,91 +768,91 @@
 
 
 {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 2,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 0,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,
       "walkable": true
     },
     {
-      "assetID": 1,
+      "assetID": 4,
       "start": false,
       "finish": false,
       "placeable": true,

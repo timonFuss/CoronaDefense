@@ -19,6 +19,8 @@ public class TileScript : MonoBehaviour
 
     private Tower myTower;
 
+    private const int orderOffset = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +41,7 @@ public class TileScript : MonoBehaviour
         this.IsStart = start;
         this.IsFinish = finish;
         this.SpriteRenderer = GetComponent<SpriteRenderer>();
-        this.SpriteRenderer.sortingOrder = -1;
+        this.SpriteRenderer.sortingOrder = this.GridPosition.Y;
         transform.position = worldPos;
         transform.SetParent(parent);
         LevelManager.Instance.Tiles.Add(gridPos, this);
@@ -76,7 +78,7 @@ public class TileScript : MonoBehaviour
     private void PlaceTower()
     {
         GameObject tower = (GameObject)Instantiate(GameManager.Instance.ClickedButton.TowerPrefab, transform.position, Quaternion.identity);
-        tower.GetComponent<SpriteRenderer>().sortingOrder = GridPosition.Y;
+        tower.GetComponent<SpriteRenderer>().sortingOrder = GridPosition.Y + orderOffset;
         tower.transform.SetParent(transform);
 
         this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();

@@ -152,7 +152,7 @@ public class LevelManager : Singleton<LevelManager>
         TileScript newTile = Instantiate(tilePrefabs[tile.assetID]).GetComponent<TileScript>();
         newTile.Setup(new Point(x, y), new Vector3(worldStart.x + (TileSize * x), worldStart.y - (TileSize * y), 0), map, tile.placeable, tile.walkable, tile.start, tile.finish);
 
-        if(newTile.IsStart == true)
+        if (newTile.IsStart == true)
         {
             startTile = newTile;
             //startTile.SpriteRenderer.color = Color.green;

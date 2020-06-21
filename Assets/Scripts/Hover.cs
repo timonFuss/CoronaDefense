@@ -7,6 +7,8 @@ public class Hover : Singleton<Hover>
 
     private SpriteRenderer spriteRenderer;
 
+    private const int orderOffset = 20;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class Hover : Singleton<Hover>
     public void Activate(Sprite sprite)
     {
         this.spriteRenderer.sprite = sprite;
+        this.spriteRenderer.sortingOrder = orderOffset;
         spriteRenderer.enabled = true;
     }
 
