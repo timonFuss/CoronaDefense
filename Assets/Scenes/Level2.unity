@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health:
-    bar: {fileID: 0}
+    bar: {fileID: 1239289475}
     maxVal: 100
     currentVal: 100
 --- !u!4 &588276668
