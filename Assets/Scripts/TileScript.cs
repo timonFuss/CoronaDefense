@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -67,7 +68,7 @@ public class TileScript : MonoBehaviour
             {
                 GameManager.Instance.DeselectTower();
             }
-        }else if(!EventSystem.current.IsPointerOverGameObject() && myTower != null && Input.GetMouseButtonDown(1))
+        }else if(!EventSystem.current.IsPointerOverGameObject() && myTower != null && Input.GetMouseButtonDown(1) && !GameManager.Instance.WaveActive)
         {
             this.IsWalkable = true;
             this.IsPlaceable = true;
