@@ -49,9 +49,7 @@ public class Projectile : MonoBehaviour
             {
                 //geht noch nicht. projectile erkennt keinen Tower als parent
                 //target.TakeDamage(parent.Damage);
-                target.TakeDamage(5);
-        
-
+                target.TakeDamage(parent.Damage);
                 GameManager.Instance.Pool.ReleaseObject(gameObject);
             }
         }

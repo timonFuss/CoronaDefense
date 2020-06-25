@@ -44,7 +44,9 @@ public class GameManager : Singleton<GameManager>
 
     private Tower selectedTower;
 
-    private int monsterHealth = 15;
+    private int monsterHealth = 45;
+
+    private int monsterSpeed = 8;
 
     private bool gameOver = false;
 
@@ -94,7 +96,7 @@ public class GameManager : Singleton<GameManager>
         {
             keyBoardMenu.SetActive(true);
         }
-        Currency = 25;
+        Currency = 10;
     }
 
     // Update is called once per frame
@@ -175,8 +177,8 @@ public class GameManager : Singleton<GameManager>
         if (remainingWaves > 0)
         {
             remainingWaves--;
-            //Amount of Monsters per wave
-            for (int i = 0; i < wave * 2; i++)
+            //Amount of Monsters per wave (wave * 2)
+            for (int i = 0; i < (5 + wave); i++)
             {
                 int monsterIndex = Random.Range(0, 2);
 
@@ -194,18 +196,24 @@ public class GameManager : Singleton<GameManager>
 
                 Monster monster = Pool.GetObject(type).GetComponent<Monster>();
 
+                monster.SetSpeed(monsterSpeed);
                 monster.Spawn(monsterHealth);
 
-                //health of monsters get increased every third wave
+                /*
                 if (wave % 3 == 0)
                 {
                     monsterHealth += 5;
                 }
 
+                */
                 activeMonsters.Add(monster);
 
-                yield return new WaitForSeconds(2.5f);
+                yield return new WaitForSeconds(1.0f);
             }
+            
+            //health and speed of monsters get increased every wave
+            monsterHealth += 15;
+            monsterSpeed += 2;
         }
     }
 

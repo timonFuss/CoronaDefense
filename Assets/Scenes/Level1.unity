@@ -1158,8 +1158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.9, y: -13.7}
-  m_SizeDelta: {x: 226.1553, y: 300.9897}
+  m_AnchoredPosition: {x: 1.9, y: -16.09}
+  m_SizeDelta: {x: 226.1553, y: 305.74084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &557242424
 MonoBehaviour:
@@ -1464,7 +1464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -103.8}
+  m_AnchoredPosition: {x: 0, y: -133.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &671870678
@@ -2613,7 +2613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -57.1, y: 74}
+  m_AnchoredPosition: {x: -68.9, y: 74}
   m_SizeDelta: {x: 67.44833, y: 40.757713}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024350622
@@ -2962,8 +2962,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40, y: 74.025}
-  m_SizeDelta: {x: 108.69336, y: 40.80686}
+  m_AnchoredPosition: {x: 35.485, y: 74.025}
+  m_SizeDelta: {x: 117.72313, y: 40.80686}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270734962
 MonoBehaviour:
@@ -3006,13 +3006,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Die Kamera bewegst du mit den Tasten "W", "A", "S" und "D"
+  m_Text: Die Kamera bewegst du mit den Tasten   "W", "A", "S" und "D"
 --- !u!222 &1270734964
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3662,7 +3662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -57.1, y: 0}
+  m_AnchoredPosition: {x: -68.9, y: -27.839996}
   m_SizeDelta: {x: 31.226662, y: 27.497414}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1484972602
@@ -4220,8 +4220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35.485, y: -25.9}
-  m_SizeDelta: {x: 117.72252, y: 125.79395}
+  m_AnchoredPosition: {x: 42.95, y: -34.225}
+  m_SizeDelta: {x: 132.64885, y: 159.95099}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1940631979
 MonoBehaviour:
@@ -4264,19 +4264,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Mit dem Mouse Click kannst du deine Tower
-
-    auf die passende Position
-    ziehen
-
-
-    Mit Rechtsklick verkaufst du sie wieder'
+  m_Text: "Mit einem Linksklick kannst du Tower ausw\xE4hlen und sie\nauf der gew\xFCnschten
+    Position platzieren.\n\nDurch einen Linksklick auf einen platzierten Tower wird
+    seine Range eingeblendet, mit einem Rechtsklick verk\xE4ufst du ihn."
 --- !u!222 &1940631981
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
   "levelIdx": 1,
   "rows": 9,
   "levelType": 1,
-  "waves": 1,
+  "waves": 3,
   "tiles":
   [
 

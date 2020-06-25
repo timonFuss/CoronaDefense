@@ -209,8 +209,8 @@ MonoBehaviour:
   speed: 8
   health:
     bar: {fileID: 1872823232878748042}
-    maxVal: 15
-    currentVal: 15
+    maxVal: 30
+    currentVal: 30
 --- !u!61 &1872823232174043630
 BoxCollider2D:
   m_ObjectHideFlags: 0

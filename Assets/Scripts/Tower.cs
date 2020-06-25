@@ -63,7 +63,6 @@ public class Tower : MonoBehaviour
 
     public void Select()
     {
-        Debug.Log(mySpriteRenderer);
         mySpriteRenderer.enabled = !mySpriteRenderer.enabled;
     }
 
@@ -87,11 +86,18 @@ public class Tower : MonoBehaviour
         {
             if (canAttack)
             {
-                Shoot();
+                if (this.projectileType == "soundProjectile" && (target.name != "covid_01 Variant" && target.name != "bat_01 Variant"))
+                {
+                    Debug.Log("Blabla");
+                }
+                else
+                {
+                    Shoot();
 
-                myAnimator.SetTrigger("Attack");
+                    myAnimator.SetTrigger("Attack");
 
-                canAttack = false;
+                    canAttack = false;
+                }
             }
         }
         else if(monsters.Count > 0)
@@ -110,7 +116,6 @@ public class Tower : MonoBehaviour
 
         // ??????????????????????????????
         projectile.transform.position = transform.position;
-
         projectile.Initialize(this);
     }
 
