@@ -88,7 +88,7 @@ public class Tower : MonoBehaviour
             {
                 if (this.projectileType == "soundProjectile" && (target.name != "covid_01 Variant" && target.name != "bat_01 Variant"))
                 {
-                    Debug.Log("Blabla");
+                    // Tritt ein, wenn die SoundBox einen Mensch in range hat --> nicht angreifen
                 }
                 else
                 {

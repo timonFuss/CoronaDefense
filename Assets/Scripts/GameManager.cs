@@ -177,7 +177,6 @@ public class GameManager : Singleton<GameManager>
         if (remainingWaves > 0)
         {
             remainingWaves--;
-            //Amount of Monsters per wave (wave * 2)
             for (int i = 0; i < (5 + wave); i++)
             {
                 int monsterIndex = Random.Range(0, 2);
@@ -199,13 +198,6 @@ public class GameManager : Singleton<GameManager>
                 monster.SetSpeed(monsterSpeed);
                 monster.Spawn(monsterHealth);
 
-                /*
-                if (wave % 3 == 0)
-                {
-                    monsterHealth += 5;
-                }
-
-                */
                 activeMonsters.Add(monster);
 
                 yield return new WaitForSeconds(1.0f);
