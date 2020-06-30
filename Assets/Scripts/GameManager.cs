@@ -179,7 +179,15 @@ public class GameManager : Singleton<GameManager>
             remainingWaves--;
             for (int i = 0; i < (5 + wave); i++)
             {
-                int monsterIndex = Random.Range(0, 2);
+                int monsterIndex = 1;
+                if (LevelManager.Instance.LevelIdx == 1)
+                {
+                    monsterIndex = Random.Range(0, 2);
+                }
+                else
+                {
+                    monsterIndex = Random.Range(0, 3);
+                }
 
                 string type = string.Empty;
 
@@ -190,6 +198,9 @@ public class GameManager : Singleton<GameManager>
                         break;
                     case 1:
                         type = "bat_01 Variant";
+                        break;
+                    case 2:
+                        type = "grandpa Variant";
                         break;
                 }
 
