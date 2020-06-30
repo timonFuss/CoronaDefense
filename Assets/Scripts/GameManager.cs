@@ -210,6 +210,8 @@ public class GameManager : Singleton<GameManager>
                 monster.Spawn(monsterHealth);
 
                 activeMonsters.Add(monster);
+                Debug.Log($"ACTIVEMONSTER = {activeMonsters.Count}");
+
 
                 yield return new WaitForSeconds(1.0f);
             }
@@ -243,6 +245,7 @@ public class GameManager : Singleton<GameManager>
     public void RemoveMonster(Monster monster)
     {
         activeMonsters.Remove(monster);
+        Debug.Log($"ACTIVEMONSTER = {activeMonsters.Count}");
 
         if (monster.GetComponent<SpriteRenderer>().color == Color.red && monster.name.Equals("bat_01 Variant"))
         {
