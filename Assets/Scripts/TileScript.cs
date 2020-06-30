@@ -20,7 +20,7 @@ public class TileScript : MonoBehaviour
 
     private Tower myTower;
 
-    private const int orderOffset = 100;
+    private const int orderOffset = 99;
 
     // Start is called before the first frame update
     void Start()
