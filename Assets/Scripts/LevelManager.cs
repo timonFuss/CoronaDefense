@@ -98,6 +98,15 @@ public class LevelManager : Singleton<LevelManager>
         
         level = JsonUtility.FromJson<LevelAttributes>(jsonFile.text);
         GameManager.Instance.RemainingWaves = level.waves;
+        
+        if(level.levelIdx == 2){
+            GameManager.Instance.Currency = 40;
+        }else{
+            GameManager.Instance.Currency = 10;
+        }
+            
+        
+        
         xLength = level.tiles.Length / level.rows;
         yLength = level.rows;
         int idx = 0;

@@ -10,10 +10,13 @@ public class GameManager : Singleton<GameManager>
 
     public ObjectPool Pool { get; set; }
 
-    private int currency;
+    private int currency = 0;
 
     [SerializeField]
     private Text currencyText;
+
+    [SerializeField]
+    private GameObject pathWarning;
     
     [SerializeField]
     private GameObject statsPanel;
@@ -110,7 +113,8 @@ public class GameManager : Singleton<GameManager>
         {
             keyBoardMenu.SetActive(true);
         }
-        Currency = 10;
+        
+        
     }
 
     // Update is called once per frame
@@ -171,7 +175,8 @@ public class GameManager : Singleton<GameManager>
         }
         else
         {
-            Debug.LogError("KEIN GÜLTIGER PATH MÖGLICH!");
+            pathWarning.SetActive(true);
+            //Debug.LogError("KEIN GÜLTIGER PATH MÖGLICH!");
         }
         
     }
@@ -284,7 +289,13 @@ public class GameManager : Singleton<GameManager>
                 }
                 else
                 {
-                    nextLevelMenu.SetActive(true);
+                    if(LevelManager.Instance.LevelIdx == 2){
+                        SceneManager.LoadScene("EndScene");
+                    }else{
+                        nextLevelMenu.SetActive(true);
+                    }
+                    
+                   
                 }
 
             }
@@ -319,9 +330,20 @@ public class GameManager : Singleton<GameManager>
         SceneManager.LoadScene("MainMenuScene");
     }
 
+    public void EndScreen()
+    {
+        SceneManager.LoadScene("EndScene");
+    }
+
+
     public void CloseKeyboardPopUp()
     {
         keyBoardMenu.SetActive(false);
+    }
+
+    public void CloseWarningPopup(){
+        pathWarning.SetActive(false);
+        towerPanel.ShowSideMenu();
     }
 
     public void ShowStats(){
@@ -359,4 +381,6 @@ public class GameManager : Singleton<GameManager>
             }
         }
     }
+
+
 }

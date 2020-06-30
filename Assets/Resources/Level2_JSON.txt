@@ -182,7 +182,7 @@
       "assetID": 5,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
@@ -251,21 +251,21 @@
       "assetID": 7,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
       "assetID": 7,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
       "assetID": 7,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
@@ -333,7 +333,7 @@
       "assetID": 8,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
@@ -427,7 +427,7 @@
       "assetID": 8,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
@@ -499,7 +499,7 @@
       "assetID": 5,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
@@ -633,14 +633,14 @@
       "assetID": 6,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
       "assetID": 6,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
@@ -678,14 +678,14 @@
       "assetID": 7,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
       "assetID": 7,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
@@ -706,7 +706,7 @@
       "assetID": 5,
       "start": false,
       "finish": false,
-      "placeable": true,
+      "placeable": false,
       "walkable": false
     },
     {
