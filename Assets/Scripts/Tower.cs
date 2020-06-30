@@ -58,9 +58,9 @@ public class Tower : MonoBehaviour
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         Level=1;
         Upgrades = new TowerUpgrade[]{
-            new TowerUpgrade(2,3,0),
-            new TowerUpgrade(5,5,0),
-            new TowerUpgrade(10,8,0),
+            new TowerUpgrade(2,5,0),
+            new TowerUpgrade(5,10,0),
+            new TowerUpgrade(10,15,0),
         };
         
     }

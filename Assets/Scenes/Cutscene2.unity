@@ -505,6 +505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 360814580}
   dialogueText: {fileID: 31994802}
+  nextLevel: {fileID: 1542115475}
 --- !u!4 &573568082
 Transform:
   m_ObjectHideFlags: 0
@@ -842,7 +843,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level1
+  m_Text: Level2
 --- !u!222 &1542115476
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -7,6 +7,9 @@ public class DialogueManager : MonoBehaviour
 {   
     public Text nameText;
     public Text dialogueText;
+
+    [SerializeField]
+    public Text nextLevel;
     private Queue<string> sentences;
 
     // Start is called before the first frame update
@@ -48,6 +51,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
     void EndDialogue(){
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene(nextLevel.text);
     }
 }
