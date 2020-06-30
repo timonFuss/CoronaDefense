@@ -584,28 +584,26 @@ MonoBehaviour:
   dialogue:
     name: Captain Sanchez
     sentences:
-    - "Argh, that time warp didnt work as expected...\t"
-    - Next time you better double check before telling me you got the right coordinates
-    - Guess we cant do anything about it, I better start to repair that ship.
-    - Btw what does it say which year did we land in?
-    - March 2020?! Oh man we couldnt get more unlucky...
+    - Argh, that time warp didnt work as expected...
+    - We landed in early 2020?! Oh man we couldnt get more unlucky...
     - Why you ask? Slept trough your history lessons?
-    - 2020 was the most catastrophic year around that time. They nearly started a
-      new World War,  burned down a whole continent ...
-    - and they are only 3 months into the year. They will start rioting, too ...
-    - Because they realize what a shithole of a country the US is ... wait ... shit
-      ...
-    - 'I just remembered something... '
-    - Its about the time the corona virus is going to be spread around the world
-    - God bless we landed in China, somewhere around this park everything is going
+    - 2020 was the most catastrophic year around that time. They had a full economic
+      crisis in many countries..
+    - 'How that happened? '
+    - Its because the whole world got locked down due to the SARS-CoV-2 Virus
+    - Its about the time the corona virus is going to be spread around the world,
+      starting in China
+    - Good thing we landed there, somewhere around this park everything is going
       to start
-    - 'here take those pills that Bulma gave me, with them you can build things very
-      fast use them to keep those weird bats away from the people '
-    - What do you mean why the drama, have you slept in Biology, too?!
-    - //EXPLANATION HOW VIRUSES GET TRANSFERED FROM ANIMAL TO HUMAN//
-    - Do you understand now?
-    - Good so while I repair our ship you build some speakers and anti-bat cans to
-      keep them away from the people.
+    - 'Unfortanately the origin of the virus is unclear, because China refused to
+      help with the clarification, but i''ll explain you something:'
+    - If humans have too mutch contact to wild animals, there is a risk that unknown
+      viruses that live with these animals mutate and get transmitted to humans
+    - So its most likely, that the virus was transmitted to humans of an animal like
+      a bat..
+    - Good so while I repair our ship you build some speakers and desinfection cans
+      to keep the virus away from the people.
+    - And remember to wash your hands and keep distance
 --- !u!4 &1042966985
 Transform:
   m_ObjectHideFlags: 0
