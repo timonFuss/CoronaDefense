@@ -52,4 +52,21 @@ public class TowerButton : MonoBehaviour
     {
         
     }
+     public void ShowInfo(string type){
+         string tooltip = string.Empty;
+
+         switch (type){
+            case "Soundbox":
+                Tower soundbox = towerPrefab.GetComponentInChildren<Tower>();
+                tooltip = string.Format("<color=#ffa500ff><size=20><b>Soundbox</b></size></color>\nDamage: {0}", soundbox.Damage);
+                break;
+
+            case "DesinfectSpray":
+                Tower desinfectSpray = towerPrefab.GetComponentInChildren<Tower>();
+                tooltip = string.Format("<color=#3b7eb6><size=20><b>Desinfect Spray</b></size></color>\nDamage: {0}", desinfectSpray.Damage);
+                break;
+         }
+        GameManager.Instance.SetTooltipText(tooltip);
+        GameManager.Instance.ShowStats();
+    }
 }

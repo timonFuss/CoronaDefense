@@ -17,6 +17,8 @@ public class Tower : MonoBehaviour
     [SerializeField]
     private string projectileType;
 
+    public int Level { get; protected set; }
+
     [SerializeField]
     private float projectileSpeed;
 
@@ -47,11 +49,20 @@ public class Tower : MonoBehaviour
 
     public int Price { get; set; }
 
+    public TowerUpgrade[] Upgrades { get; protected set; }
+
     // Start is called before the first frame update
     void Start()
     {
         myAnimator = transform.parent.GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        Level=1;
+        Upgrades = new TowerUpgrade[]{
+            new TowerUpgrade(2,3,0),
+            new TowerUpgrade(5,5,0),
+            new TowerUpgrade(10,8,0),
+        };
+        
     }
 
     // Update is called once per frame
@@ -64,6 +75,7 @@ public class Tower : MonoBehaviour
     public void Select()
     {
         mySpriteRenderer.enabled = !mySpriteRenderer.enabled;
+        GameManager.Instance.UpdateUpgradeTooltip();
     }
 
     private void Attack()
@@ -133,5 +145,21 @@ public class Tower : MonoBehaviour
         {
             monsters.Enqueue(other.GetComponent<Monster>());
         }
+    }
+
+    public string GetStats(){
+        if (Upgrades.Length >Level){
+            
+            return string.Format("<color=#F0DF00ff><size=20><b>Upgrade</b></size></color>\nLevel: {0} \nDamage: {1} <color=#20D738ff>+{2}</color>",Level,damage,Upgrades[Level-1].Damage);
+        }
+        return string.Format("<color=#F0DF00ff><size=20><b>Upgrade</b></size></color>\nLevel: {0} \nDamage: {1}",Level, damage);
+    }
+
+    public void Upgrade(){
+        GameManager.Instance.Currency -= Upgrades[Level-1].Price;
+        Price += Upgrades[Level-1].Price;
+        this.damage += Upgrades[Level-1].Damage;
+        Level++;
+        GameManager.Instance.UpdateUpgradeTooltip();
     }
 }

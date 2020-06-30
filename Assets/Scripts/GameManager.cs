@@ -14,6 +14,18 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField]
     private Text currencyText;
+    
+    [SerializeField]
+    private GameObject statsPanel;
+
+    [SerializeField]
+    private Text sizeText;
+
+    [SerializeField]
+    private Text statsText; 
+    
+    [SerializeField]
+    private GameObject upgradeButton;
 
     public int Currency
     {
@@ -41,6 +53,8 @@ public class GameManager : Singleton<GameManager>
 
     private List<Monster> activeMonsters = new List<Monster>();
 
+    [SerializeField]
+    private Text upgradePriceText;
 
     private Tower selectedTower;
 
@@ -217,6 +231,7 @@ public class GameManager : Singleton<GameManager>
         }
         selectedTower = tower;
         selectedTower.Select();
+        upgradeButton.SetActive(true);
     }
 
     public void DeselectTower()
@@ -225,8 +240,9 @@ public class GameManager : Singleton<GameManager>
         {
             selectedTower.Select();
         }
-
+        upgradeButton.SetActive(false);
         selectedTower = null;
+        
     }
 
     public void RemoveMonster(Monster monster)
@@ -266,6 +282,10 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    public void LoadCutscene(){
+        SceneManager.LoadScene("Cutscene2");
+    }
+
     public void LoadNextLevel()
     {
         var level = LevelManager.Instance.LevelIdx;
@@ -288,5 +308,41 @@ public class GameManager : Singleton<GameManager>
     public void CloseKeyboardPopUp()
     {
         keyBoardMenu.SetActive(false);
+    }
+
+    public void ShowStats(){
+        statsPanel.SetActive(!statsPanel.activeSelf);
+    }
+
+    public void ShowSelectedTowerStats(){
+        UpdateUpgradeTooltip();
+        statsPanel.SetActive(!statsPanel.activeSelf);
+    }
+
+    public void SetTooltipText(string txt){
+        statsText.text = txt;
+        sizeText.text = txt;
+    }
+
+    public void UpdateUpgradeTooltip(){
+        if(selectedTower != null){
+            SetTooltipText(selectedTower.GetStats());
+
+            if (selectedTower.Upgrades.Length >= selectedTower.Level +1 ){
+                upgradePriceText.text = selectedTower.Upgrades[selectedTower.Level-1].Price.ToString() + "$";
+
+            }
+            else{
+                upgradePriceText.text = "Max LvL";
+            }
+        }
+    }
+
+    public void UpgradeTower(){
+        if (selectedTower != null){
+            if(selectedTower.Level <= selectedTower.Upgrades.Length && Currency >= selectedTower.Upgrades[selectedTower.Level-1].Price){
+                selectedTower.Upgrade();
+            }
+        }
     }
 }

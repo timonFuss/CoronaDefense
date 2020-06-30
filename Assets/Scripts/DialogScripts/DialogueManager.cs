@@ -12,11 +12,14 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();
+       
+    }
+
+    void Awake() {
+         sentences = new Queue<string>();
     }
 
     public void StartDialogue (Dialogue dialogue){
-    
         nameText.text = dialogue.name;
         sentences.Clear();
 
@@ -26,7 +29,6 @@ public class DialogueManager : MonoBehaviour
 
         DisplayNextSentence();
     }
-
     public void DisplayNextSentence(){
         if (sentences.Count == 0){
             EndDialogue();
@@ -46,6 +48,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
     void EndDialogue(){
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level2");
     }
 }
